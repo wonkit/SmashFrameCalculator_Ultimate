@@ -1,0 +1,37 @@
+#FORMAT
+#NAME STARTING_TIME IMAGELINK HIT_TIME IMAGELINK FAF_TIME IMAGELINK ORIGINAL_FIRST_HITFRAME ORIGINAL_FAF AERIAL_FLAG Any remaining notes
+#
+#Time is formatted in MM.SS.XX
+#Example
+#Jab1 2.19.23 https.//i.imgur.com/kuCR4n6.png 2.19.11 https.//i.imgur.com/L3YHmO8.png 2.18.76 https.//i.imgur.com/qs7fyuP.png 8 26 0
+
+#Grounded Moves
+Jab1 2.19.23 https.//i.imgur.com/kuCR4n6.png 2.19.11 https.//i.imgur.com/L3YHmO8.png 2.18.76 https.//i.imgur.com/qs7fyuP.png 8 26 0
+JabFinisher 1.52.16 https.//i.imgur.com/dOHXVue.png 1.52.13 https.//i.imgur.com/rLvV50b.png 1.51.51 https.//i.imgur.com/NH6kHVt.png 3 43 0
+DashAttack 
+
+#Tilts
+FTilt 
+UTilt 2.14.80 https.//i.imgur.com/YSkuyc3.png 2.14.70 https://i.imgur.com/VtKChd3.png 2.13.83 https://i.imgur.com/XKqtC6e.png 10 68 0
+DTilt 2.17.60 https://i.imgur.com/XtJoXCI.png 2.17.36 https://i.imgur.com/U4HBA2y.png 2.16.95 https://i.imgur.com/Op26Ian.png 14 40 0 Footage suffers from ghosting at this segment. Will probably have to redo
+
+#Smashes
+FSmash 2.12.65 https://i.imgur.com/VjMWLXL.png 2.12.36 https://i.imgur.com/dL7mHwm.png 2.11.60 https://i.imgur.com/t51I8MM.png 18 67 0
+USmash 2.11.60 https://i.imgur.com/t51I8MM.png 2.11.31 https://i.imgur.com/XHIPiUw.png 2.10.55 https://i.imgur.com/Zpemt8b.png 18 68 0
+DSmash 2.13.83 https://i.imgur.com/XKqtC6e.png 2.13.55 https://i.imgur.com/EpPgVBj.png 2.12.65 https://i.imgur.com/VjMWLXL.png 17 72 0
+
+#Grabs
+Grab 2.09.56 https://i.imgur.com/Zpemt8b.png 2.09.40 https://i.imgur.com/WY4a9ZF.png 2.08.88 https://i.imgur.com/FIOwoxw.png 7 32 0 May have to wait for different footage
+
+#Specials
+AutoReticle 1.25.65 https://i.imgur.com/spUomw1.png 1.25.25 https://i.imgur.com/h6GGgSD.png 1.24.53 https://i.imgur.com/BJdkEVE.png 29 68 0
+ExplosiveFlame 0.15.26 https://i.imgur.com/t3CMuMa.png 0.14.75 https://i.imgur.com/K87a6hH.png 0.14.06 https://i.imgur.com/HMnGTqP.png 28 90 0 HIT FRAME MOST LIKELY INACCURATE
+Warp 
+Counter(Hit) 0.56.16 https://i.imgur.com/pc034Sz.png 0.55.85 https://i.imgur.com/7knR0lR.png 0.54.90 https://i.imgur.com/842Gr6i.png 4 56 0 MOST LIKELY INACCURATE DUE TO FREEZE FRAMES AND STANDING STILL
+
+#Aerials
+NAir 
+FAir
+UAir
+BAir 2.00.16 https://i.imgur.com/HkKQN2f.png 2.00.05 https://i.imgur.com/kVtJW6z.png NULL NULL 
+DAir
