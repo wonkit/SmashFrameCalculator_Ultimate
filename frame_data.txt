@@ -5,33 +5,152 @@
 #Example
 #Jab1 2.19.23 https.//i.imgur.com/kuCR4n6.png 2.19.11 https.//i.imgur.com/L3YHmO8.png 2.18.76 https.//i.imgur.com/qs7fyuP.png 8 26 0
 
-#Grounded Moves
-Jab1 2.19.23 https.//i.imgur.com/kuCR4n6.png 2.19.11 https.//i.imgur.com/L3YHmO8.png 2.18.76 https.//i.imgur.com/qs7fyuP.png 8 26 0
-JabFinisher 1.52.16 https.//i.imgur.com/dOHXVue.png 1.52.13 https.//i.imgur.com/rLvV50b.png 1.51.51 https.//i.imgur.com/NH6kHVt.png 3 43 0
-DashAttack 
+######Grounded Moves#######
 
-#Tilts
-FTilt 
-UTilt 2.14.80 https.//i.imgur.com/YSkuyc3.png 2.14.70 https://i.imgur.com/VtKChd3.png 2.13.83 https://i.imgur.com/XKqtC6e.png 10 68 0
-DTilt 2.17.60 https://i.imgur.com/XtJoXCI.png 2.17.36 https://i.imgur.com/U4HBA2y.png 2.16.95 https://i.imgur.com/Op26Ian.png 14 40 0 Footage suffers from ghosting at this segment. Will probably have to redo
+#Jab1
+Jab1 -s 2.19.23 -si https.//i.imgur.com/kuCR4n6.png -h 2.19.11 -hi https.//i.imgur.com/L3YHmO8.png -e 2.18.76 -ei https.//i.imgur.com/qs7fyuP.png -oh 8 -of 26 -a 0 -n AHFJKHDKFHKJAHF
 
-#Smashes
-FSmash 2.12.65 https://i.imgur.com/VjMWLXL.png 2.12.36 https://i.imgur.com/dL7mHwm.png 2.11.60 https://i.imgur.com/t51I8MM.png 18 67 0
-USmash 2.11.60 https://i.imgur.com/t51I8MM.png 2.11.31 https://i.imgur.com/XHIPiUw.png 2.10.55 https://i.imgur.com/Zpemt8b.png 18 68 0
-DSmash 2.13.83 https://i.imgur.com/XKqtC6e.png 2.13.55 https://i.imgur.com/EpPgVBj.png 2.12.65 https://i.imgur.com/VjMWLXL.png 17 72 0
+#Dash Attack
+	#Smash 4 data
+	DashAttack -of 52 -oh 6
+	
+	#hit
+	DashAttack -s 1.15.45 -si https://i.imgur.com/0LQN4Ln.png -h  1.15.35 -hi https://i.imgur.com/KAZqqhP.png
+	
+	#faf
+	DashAttack -s 1.05.30 -si https://i.imgur.com/yqafpMD.png -e  1.04.48 -ei https://i.imgur.com/dHy43tp.png -n __FAF scene has severe ghosting issues__. May redo.
+	#notes
+	DashAttack -n **STILL INVINCIBLE** :pillowEyes:
+	
+#Grab
+	#Smash 4 data
+	Grab -of 32 -oh 7
+	
+	#hit 
+	Grab -s 1.54.03 -si https://i.imgur.com/vNoTzwq.png -h 1.53.93 -hi https://i.imgur.com/D3IZWEc.jpg
+	
+	#faf
+	Grab -s 1.40.30 -si https://i.imgur.com/fAabM7e.png -e 1.39.65 -ei https://i.imgur.com/G1J59b8.png
 
-#Grabs
-Grab 2.09.56 https://i.imgur.com/Zpemt8b.png 2.09.40 https://i.imgur.com/WY4a9ZF.png 2.08.88 https://i.imgur.com/FIOwoxw.png 7 32 0 May have to wait for different footage
+###Tilts###
 
-#Specials
-AutoReticle 1.25.65 https://i.imgur.com/spUomw1.png 1.25.25 https://i.imgur.com/h6GGgSD.png 1.24.53 https://i.imgur.com/BJdkEVE.png 29 68 0
-ExplosiveFlame 0.15.26 https://i.imgur.com/t3CMuMa.png 0.14.75 https://i.imgur.com/K87a6hH.png 0.14.06 https://i.imgur.com/HMnGTqP.png 28 90 0 HIT FRAME MOST LIKELY INACCURATE
-Warp 
-Counter(Hit) 0.56.16 https://i.imgur.com/pc034Sz.png 0.55.85 https://i.imgur.com/7knR0lR.png 0.54.90 https://i.imgur.com/842Gr6i.png 4 56 0 MOST LIKELY INACCURATE DUE TO FREEZE FRAMES AND STANDING STILL
+#FTilt
+	#Smash 4 data
+	
+	#faf
+	FTilt -s 0.27.06 -si https://i.imgur.com/IFCeR26.png -e 0.25.76 -ei https://i.imgur.com/bqN8hTt.png
 
-#Aerials
-NAir 
-FAir
-UAir
-BAir 2.00.16 https://i.imgur.com/HkKQN2f.png 2.00.05 https://i.imgur.com/kVtJW6z.png NULL NULL 
-DAir
+###Smashes###
+
+#USmash
+	#Smash 4 data
+	USmash -of 68 -oh 18
+	
+	#hit 
+	USmash -s 1.14.56 -h 1.14.28 -si https://i.imgur.com/vqJ11PJ.png -hi https://i.imgur.com/IMntLoS.png
+	
+	#faf
+	USmash -s 1.13.30 https://i.imgur.com/1bHCWAj.png -e 1.12.25 -ei https://i.imgur.com/or5WDUl.png
+
+#FSmash
+	#Smash 4 data
+	FSmash -of 67 -oh 18
+	
+	#hit 
+	
+	#faf
+	FSmash -s 0.28.11 -si https://i.imgur.com/551jRIt.png -e 0.27.06 -ei https://i.imgur.com/IFCeR26.png
+	
+	
+######Specials######
+
+#Autoreticle
+	#Smash 4 data
+	AutoReticle -of 68 -oh 29
+	
+	#faf
+	AutoReticle -s 1.56.90 -si https://i.imgur.com/NI2K1m3.jpg -e 1.55.76 https://i.imgur.com/PKFXBm5.jpg
+
+#Explosive Flame
+	#Smash 4 data
+	ExplosiveFlame -of 90 -oh 28
+	
+	#faf
+	ExplosiveFlame -s 0.29.33 -si https://i.imgur.com/3Ud1h17.png -e 0.28.11
+	
+#Counter(whiff)
+	#Smash 4 data
+	Counter(whiff) -of 75
+	#faf
+	Counter(whiff) -s 2.19.35 -si https://i.imgur.com/Zlpusqn.jpg -e 2.18.18 -ei https://i.imgur.com/X2VrRc0.jpg
+	
+######Aerials######
+
+
+#NAir
+	#original landing lag & autocancel & hit & FAF
+	NAir -olg 20 -oac 40 -oh 5 -of 52
+	
+	#hit
+	 
+	#faf
+	
+	#autocancel
+	
+	#landing lag
+	
+#FAir
+	#original landing lag & autocancel & hit & FAF
+	FAir -olg 12 -oac -24 -oh 9 -of 45
+	
+	#hit
+	 
+	#faf
+	
+	#autocancel
+	
+	#landing lag
+	
+#UAir
+	#original landing lag & autocancel & hit & FAF
+	UAir -oac 64 -of 52 -oh 8 -olg 24
+	
+	#hit
+	 
+	#faf
+	
+	#autocancel
+	
+	#landing lag
+	
+
+#BAir
+	#original landing lag & autocancel & hit & FAF
+	BAir -olg 16 -oac 35 -oh 8 -of 50
+	
+	#hit
+	
+	#faf
+	
+	#autocancel
+	BAir -s 2.00.16 -si https://i.imgur.com/I4rzoTC.png -ac 1.59.51 -aci https://i.imgur.com/qq8nr1P.png
+	
+	#landing lag
+	BAir -lf 2.05.31 -e 2.05.15 -lfi https://i.imgur.com/1wK1Mjm.png -ei https://i.imgur.com/lJjssmP.png.. 
+
+#DAir
+	#original landing lag & autocancel & hit & FAF
+	DAir -olg 18 -oac 48 -oh 10 -of 59
+	
+	#hit
+	DAir -s 1.45.85 https://i.imgur.com/EwMRZXh.png -h 1.45.70 -hi https://i.imgur.com/EwMRZXh.png
+	 
+	#faf
+	
+	#autocancel
+	
+	#landing lag
+	DAir -lf 2.24.70 -lfi https://i.imgur.com/qrnyR5e.png -e 2.24.53 -ei https://i.imgur.com/FbqNwVM.png
+	
+	#notes
+	DAir -n Hitbox is significantly bigger horizontally
