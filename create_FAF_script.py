@@ -54,42 +54,43 @@ move = {}
 import os
 import errno
 
-def printAllCalc():
-    move_start = dict[i].get('newHit')[1]
-    move_start_image = dict[i].get('newHit')[3]
-    f.write(f"\n\nThe first frame where {move_name} starts is at {move_start}\n")
-    f.write(move_start_image)
+def printMathTime(start, end, new, f):
+    f.write(f"\n\nMath Time: ")
+    f.write(f"\n```"
+            f"StartingFrame - HitboxFrame")
 
-    if move_end != 'NULL':
-        temp = dict[i].get('newFAF')[1]
-        if(temp != move_start):
-            move_start = dict[i].get('newFAF')[1]
-            move_start_image = dict[i].get('newFAF')[3]
+    f.write(f"\n{start} - {end} = {new} ms"
+            f"\n1 frame = 16.67 ms"
+            f"\n{new} ms / 16.67 ms = {new / 16.67} => {math.ceil(new / 16.67)} frames")
+    f.write(f"```")
 
-    f.write(f"\n\nThe first frame where {move_name} has a hitbox is at {move_hit}\n")
-    f.write(move_hit_image)
-    f.write(f"\n\nThe first frame where {move_name} can be acted out of is at {move_end}\n")
-    f.write(move_end_image)
-    f.write(f"\n\n\nAs a recap:\nStartingFrame: **{move_start}**"
-            f"\nHitboxFrame: **{move_hit}**"
-            f"\nVisiblyActingFrame: **{move_end}**")
+# item is a tuple consisting of move[new], move[old], a string containing title
+def printAllCalc(f, item, move_name):
 
-    if 'newHit' in dict[i]:
-        newHit = getDeltaTime(move_start, move_hit)
-        newHitFrame = newHit / 16.67
+    move_start = item[0][1]
+    move_end = item[0][2]
+    text = item[2]
+    string_list1 = item[3]
+    string_list2 = item[4]
+    image_link = [item[0][3], item[0][4]]
 
-        f.write(f"\n\n*__Hit Frame__*")
-        f.write(f"\n\nMath Time: ")
-        f.write(f"\n```"
-                f"StartingFrame - HitboxFrame")
 
-        f.write(f"\n{move_start} - {move_hit} = {newHit} ms"
-                f"\n1 frame = 16.67 ms"
-                f"\n{newHit} ms / 16.67 ms = {newHitFrame} => {math.ceil(newHitFrame)} frames")
-        f.write(f"```")
+    new = getDeltaTime(move_start, move_end)
 
-    newFAF = getDeltaTime(move_start, move_end)
-    newFAFFrame = newFAF / 16.67
+    # print title
+    f.write(f"\n\n*{text}*\n")
+
+    f.write(f"\n{string_list1[0]} {move_name} {string_list1[1]} {move_start}"
+            f"\n<{image_link[0]}>")
+    f.write(f"\n\n{string_list2[0]} {move_name} {string_list2[1]} {move_end}"
+            f"\n<{image_link[1]}>")
+
+    f.write(f"\n\nAs a recap:"
+            f"\n{string_list1[2]}: {move_start}"
+            f"\n{string_list2[2]}: {move_end}")
+    printMathTime(move_start, move_end, new, f)
+
+
 
     # f.write(f"\n\n*__First Active Frame__*")
     # f.write(f"\n\nMath Time: ")
@@ -107,12 +108,21 @@ def printAllCalc():
     # f.write(f"\nFAF is about **Frame {math.ceil(newFAFFrame)}** "
     #         f"{printComparison(math.ceil(newFAFFrame), original_faf)}")
     # f.write(f"{notes}\n")
-    f.close()
+    
 
+
+
+
+start_string = ['The first frame where', 'can start is at', 'StartingFrame']
+hitbox_string = ['The first frame where', 'has a hitbox is at', 'HitboxFrame']
+FAF_string = ['The first frame where', 'can be acted out of is', 'ActFrame']
+land_string = ['The frame that', 'lands on is', 'LandFrame']
 
 
 def longScript(dict):
     for i in dict:
+        move_name = i
+
         # create file
         filename = f"{os.getcwd()}/moves/{move_name}.txt"
 
@@ -126,40 +136,58 @@ def longScript(dict):
 
         move = dict[i]
         # define variables
-        move_name = i
-        move_hit = 'NULL'
-        move_hit_image = 'NULL'
-        move_end = 'NULL'
-        move_end_image = 'NULL'
-        move_ac = 'NULL'
-        move_ac_image = 'NULL'
-        move_land = 'NULL'
-        move_land_image = 'NULL'
-        o_faf = -1
-        o_ac = -1
-        o_lg = -1
+
+        # move_hit = 'NULL'
+        # move_hit_image = 'NULL'
+        # move_end = 'NULL'
+        # move_end_image = 'NULL'
+        # move_ac = 'NULL'
+        # move_ac_image = 'NULL'
+        # move_land = 'NULL'
+        # move_land_image = 'NULL'
+        # o_faf = -1
+        # o_ac = -1
+        # o_lg = -1
+
 
         list = []
+        total = []
 
         if 'newHit' in dict[i]:
-            list.append(tuple(move['newHit'], move['oldHit']))
-            # move_hit = dict[i].get('newHit')[2]
-            # move_hit_image = dict[i].get('newHit')[3]
+            list.append([move['newHit'], move['oldHit'], '__Hit Frame__', start_string, hitbox_string])
+            new = math.ceil(move['newHit'][0])
+            total.append(f"First Hitbox comes out on **Frame "
+                         f"{new}** {printComparison(new, move['oldHit'])}")
+
         if 'newFAF' in dict[i]:
-            list.append(tuple(move['newFAF'], move['oldHit']))
-            # move_end = dict[i].get('newFAF')[2]
-            # move_end_image = dict[i].get('newFAF')[3]
+            list.append([move['newFAF'], move['oldFAF'], '__First Active Frame (FAF)__', start_string, FAF_string])
+            new = math.ceil(move['newFAF'][0])
+            total.append(f"Can act on **Frame "
+                         f"{new}** {printComparison(new, move['oldFAF'])}")
+
         if 'newAC' in dict[i]:
-            list.append(tuple(move['newAC'], move['oldAC']))
-            # move_ac = dict[i].get('newAC')[2]
-            # move_ac_image = dict[i].get('newAC')[3]
+            list.append([move['newAC'], move['oldAC'], '__Autocancel__', start_string, FAF_string])
+            new = math.ceil(move['newAC'][0])
+            total.append(f"Autocancels on **Frame "
+                         f"{new}** {printComparison(new, move['oldAC'])}")
+
         if 'newLLag' in dict[i]:
-            list.append(tuple(move['newLLag'], move['oldLLag']))
-            # move_land = dict[i].get('newLLag')[2]
-            # move_land_image = dict[i].get('newLLag')[3]
+            list.append([move['newLLag'], move['oldLLag'], '__Landing Lag__', land_string, FAF_string])
+            new = math.ceil(move['newLLag'][0])
+            total.append(f"Has this many frames of landing lag: **Frame "
+                         f"{new}** {printComparison(new, move['oldLLag'])}")
+
+        f.write("---------------------------------")
+        f.write(f"\n**{move_name}**")
+        f.write("\n---------------------------------")
+
         for item in list:
-            printAllCalc(f, item)
+            printAllCalc(f, item, move_name)
+        f.write(f"\n\n__In Total:__")
+        for j in total:
+            f.write(f"\n{j}")
         f.close()
+
 def shortScript(dict):
     short = open("summary.txt", "w+")
     for i in dict:
@@ -204,13 +232,13 @@ def shortScript(dict):
             short.write('\n\n')
     short.close()
 
+
+
 # calculates frame data based on start and finish of timer
 def calculateNewFrame(start, end):
     new = getDeltaTime(start, end) / 16.67
     return [new , math.ceil(new)]
 
-
-#short = open(f"summary.txt", "w+")
 
 def add2dict(d, key, thing):
     if key not in d:
@@ -335,7 +363,7 @@ for i in range(source_file.__len__()):
                 # check landing frames
                 if landing_frame != 'NULL':
                     newLLag, newLLagFrame = calculateNewFrame(landing_frame, move_end)
-                    add2dict(d, 'newLLag', [newLLag, landing_frame, landing_frame_image, move_end, move_end_image])
+                    add2dict(d, 'newLLag', [newLLag, landing_frame, move_end, landing_frame_image, move_end_image])
                 # check faf
                 else:
                     newFAF, newFAFFrame = calculateNewFrame(move_start, move_end)
@@ -343,7 +371,7 @@ for i in range(source_file.__len__()):
             # check autocancel frames
             elif ac_frame != 'NULL':
                 newAC, newACFrame = calculateNewFrame(move_start, ac_frame)
-                add2dict(d, 'newAC', [newAC, move_start, ac_frame])
+                add2dict(d, 'newAC', [newAC, move_start, ac_frame, '', ''])
 
             add2dict(d, 'oldHit', original_hit)
             add2dict(d, 'oldFAF', original_faf)
@@ -355,6 +383,6 @@ for i in range(source_file.__len__()):
 
 
 shortScript(moves)
-#longScript(moves)
+longScript(moves)
 
 
